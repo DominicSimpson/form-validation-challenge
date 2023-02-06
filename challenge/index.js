@@ -15,12 +15,14 @@ fields.forEach((field) => {
 
   field.addEventListener("invalid", () => {
     field.setAttribute("aria-invalid", "true");
+
     const message = field.validationMessage;
     feedback.textContent = message;
   });
 
   field.addEventListener("input", () => {
     field.setAttribute("aria-invalid", "false");
+
     feedback.textContent = "";
   });
 });
